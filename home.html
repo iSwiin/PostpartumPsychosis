@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+button {
+  background-color:#ff3333; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 300px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+<body>
+<audio id="myAudio">
+  <source src="song.ogg" type="audio/ogg">
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Music</a>
+
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+
+    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large">About</a>
+
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 0px">
+  <h1 class="w3-margin w3-jumbo">Choose Your Music!</h1>
+
+
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird" >
+      <h1 >Question 01.</h1>
+      <a href="#cat1"><button style="margin: 6px;" >Test</button></a><br>
+      <a href="#cat2"><button style="margin: 6px;">Test</button></a><br>
+      <a href="#cat3"><button style="margin: 6px;">Test</button></a><br>
+      <a href="#cat4"><button style="margin: 6px;">Test</button></a>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="cat1">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+      </div>
+
+      <div class="w3-twothird">
+        <h1>Category 1</h1>
+        <div class="flex-container">
+          <div style="margin: 10px; border-style: double;" onclick="playAudio();">
+            <img src="money.png">
+          </div >
+          <div style="margin: 10px; border-style: double;">
+            <img src="money.png">
+          </div>
+          <div style="margin: 10px; border-style: double;">
+            <img src="money.png">
+          </div>
+           <div style="margin: 10px; border-style: double;">
+            <img src="money.png">
+          </div>
+        </div>
+        <div class="flex-container">
+          <button onclick="pauseAudio()"> Pause Music</button>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+<div class="w3-row-padding w3-padding-64 w3-container" id="cat2">
+  <div class="w3-content">
+    <div class="w3-twothird" >
+      <h1>Category 2</h1>
+      <div class="flex-container">
+        <div style="margin: 10px; border-style: double;" onclick="playAudio();">
+          <img src="money.png">
+        </div >
+        <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+        <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+         <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+      </div>
+      <div class="flex-container">
+        <button onclick="pauseAudio()"> Pause Music</button>
+      </div>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="cat3">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Category 3</h1>
+      <div class="flex-container">
+        <div style="margin: 10px; border-style: double;" onclick="playAudio();">
+          <img src="money.png">
+        </div >
+        <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+        <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+         <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+      </div>
+      <div class="flex-container">
+        <button onclick="pauseAudio()"> Pause Music</button>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="w3-row-padding w3-padding-64 w3-container" id="cat4">
+  <div class="w3-content">
+    <div class="w3-twothird" >
+      <h1>Category 4</h1>
+      <div class="flex-container">
+        <div style="margin: 10px; border-style: double;" onclick="playAudio();">
+          <img src="money.png">
+        </div >
+        <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+        <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+         <div style="margin: 10px; border-style: double;">
+          <img src="money.png">
+        </div>
+      </div>
+      <div class="flex-container">
+        <button onclick="pauseAudio()"> Pause Music</button>
+      </div>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Music Designed to help you!</h1>
+      <h5 class="w3-padding-32">The science behind specific frequency music have been proven to mood your mood and assist in whatever you want to accomplish. We have a range of frequency music including alpha, beta and gamma.</h5>
+
+      <p class="w3-text-grey">Recent studies show that the brain responds to certain music frequencies which can enhance multitudinous functions of the brain, these including decreasing levels of depression. Music therapy involves listening to music at certain frequencies which can stimulate the growth of neurotrophins in the brain. Certain music frequencies help with certain functions as shown below:
+
+
+
+alpha frequencies (8 to 13 Hz) – lowering stress, reducing anxiety, filtering out distracting sensory information, decreasing depression.
+beta frequencies ( 14Hz or greater) – increased focus, concentration and motivation, better long term memory, improved confidence
+gamma frequencies ( 25 - 140Hz ) - achieve peak concentration, attention to detail, divergent thinking .</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Project by Synergy</p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+var x = document.getElementById("myAudio");
+
+function playAudio() {
+  x.play();
+}
+
+function pauseAudio() {
+  x.pause();
+}
+</script>
+
+</body>
+</html>
