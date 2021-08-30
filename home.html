@@ -60,6 +60,11 @@ button {
   <source src="alpha1.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+  <audio id="myAudio1">
+  <source src="alpha1.mp3" type="audio/ogg">
+  <source src="alpha1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 
 <!-- Navbar -->
@@ -151,7 +156,7 @@ button {
         <div style="margin: 10px; " onclick="playAudio();">
           <img src="ximage1.png">
         </div >
-        <div style="margin: 10px;">
+        <div style="margin: 10px; "onclick="playAudio1();>
           <img src="ximage2.png">
         </div>
         <div style="margin: 10px; ">
@@ -290,6 +295,20 @@ function playAudio() {
 function pauseAudio() {
   x.pause();
 }
+function myFunction1() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+var a = document.getElementById("myAudio1");
+
+function playAudio() {
+  a.play();
+}
+
 </script>
 
 </body>
