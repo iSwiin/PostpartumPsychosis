@@ -130,14 +130,14 @@ button {
         <h1>Music for Anger/Frustration</h1>
         <div class="flex-container">
         
-          <div style="margin: 10px; width: 100px; height: 50px;" onclick="playAudio();">
+          <div style="margin: 10px; " onclick="playAudio();">
             <img src="ximage1.png">
           </div >
           
-          <div style="margin: 10px; width: 100px; height: 50px;" onclick="playAudio1();">
+          <div style="margin: 10px; " onclick="playAudio1();">
             <img src="ximage2.png">
           </div>
-          <div style="margin: 10px; width: 100px; height: 50px;" onclick="playAudio2();">
+          <div style="margin: 10px; " onclick="playAudio2();">
             <img src="ximage3.png">
           </div>
 
@@ -158,18 +158,16 @@ button {
     <div class="w3-twothird" >
       <h1>Music for Stress/Anxiousness/Exhaustion</h1>
       <div class="flex-container">
-        <div style="margin: 10px; " onclick="playAudio();">
+        <div style="margin: 10px; " onclick="playAudio3();">
           <img src="ximage1.png">
         </div >
-        <div style="margin: 10px; "onclick="playAudio1();>
+        <div style="margin: 10px; "onclick="playAudio4();>
           <img src="ximage2.png">
         </div>
         <div style="margin: 10px; ">
           <img src="ximage3.png">
         </div>
-         <div style="margin: 10px; ">
-          <img src="ximage4.png">
-        </div>
+  
       </div>
       <div class="flex-container">
         <button onclick="pauseAudio()"> Pause Music</button>
@@ -302,6 +300,8 @@ function pauseAudio() {
   x.pause();
   a.pause();
   b.pause();
+  c.pause();
+  d.pause();
 }
 
 function myFunction1() {
@@ -332,6 +332,34 @@ function playAudio2() {
   b.play();
                                          
 }
+function myFunction3() {
+  var c = document.getElementById("navDemo");
+  if (c.className.indexOf("w3-show") == -1) {
+    c.className += " w3-show";
+  } else {
+    c.className = x.className.replace(" w3-show", "");
+  }
+}
+var c = document.getElementById("myAudio3");
+
+function playAudio2() {
+  c.play();
+                                         
+}  
+function myFunction4() {
+  var d = document.getElementById("navDemo");
+  if (d.className.indexOf("w3-show") == -1) {
+    d.className += " w3-show";
+  } else {
+    d.className = x.className.replace(" w3-show", "");
+  }
+}
+var c = document.getElementById("myAudio4");
+
+function playAudio2() {
+  d.play();
+                                         
+}      
 </script>
 
 </body>
